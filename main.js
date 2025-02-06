@@ -7,8 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const isDarkMode = savedTheme === "dark";
 
     if (isDarkMode) {
-        body.classList.add("light");
+        body.classList.add("dark");
+    } else {
+        body.classList.remove("dark");
     }
+
     updateIcons(isDarkMode);
 
     // Function to update icon visibility
@@ -26,12 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
     themeToggles.forEach(toggle => {
         toggle.addEventListener("click", function () {
             const isDarkModeNow = toggle.dataset.hsThemeClickValue === "dark";
-            body.classList.toggle("light", isDarkModeNow);
+            if (isDarkModeNow) {
+                body.classList.add("dark");
+                body.classList.remove("light");
+            } else {
+                body.classList.add("light");
+                body.classList.remove("dark");
+            }
             localStorage.setItem("theme", isDarkModeNow ? "dark" : "light");
             updateIcons(isDarkModeNow);
         });
     });
 });
+
 
 const menuIcon = document.getElementById('menu');
 const crossIcon = document.getElementById('cross');
@@ -56,3 +66,39 @@ const addvertise = document.getElementById('addvertise')
 cutIcon.addEventListener('click', () => {
     addvertise.classList.add('hide');
 })
+
+
+
+
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all the buttons
+    const buttons = document.querySelectorAll('button[data-hs-tab]');
+  
+    // Add event listeners to each button
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        // Hide all images
+        const allTabs = document.querySelectorAll('[role="tabpanel"]');
+        allTabs.forEach(tab => {
+          tab.classList.add('hidden');
+        });
+  
+        // Remove "active" class from all buttons
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+        });
+  
+        // Show the corresponding image and add the "active" class to the clicked button
+        const targetTabId = button.getAttribute('data-hs-tab');
+        const targetTab = document.querySelector(targetTabId);
+        if (targetTab) {
+          targetTab.classList.remove('hidden');
+        }
+  
+        // Add active state to the clicked button
+        button.classList.add('active');
+      });
+    });
+  });
+  
