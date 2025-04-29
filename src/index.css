@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import 'animate.css';
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+body::-webkit-scrollbar{
+    display: none;
+}
