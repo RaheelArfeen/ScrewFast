@@ -1,4 +1,3 @@
-// ProductReview.jsx
 import React from 'react';
 
 const ProductReview = () => {
@@ -23,7 +22,6 @@ const ProductReview = () => {
 
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
         <a
-          href="/products/item-t845/"
           className="group relative flex h-48 items-end overflow-hidden rounded-xl shadow-lg outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:h-80"
         >
           <img
@@ -54,7 +52,6 @@ const ProductReview = () => {
         </a>
 
         <a
-          href="/products/item-a765/"
           className="group relative flex h-48 items-end overflow-hidden rounded-lg shadow-xl outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:col-span-2 md:h-80"
         >
           <img
@@ -85,7 +82,6 @@ const ProductReview = () => {
         </a>
 
         <a
-          href="/products/item-b203/"
           className="group relative flex h-48 items-end overflow-hidden rounded-lg shadow-xl outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:col-span-2 md:h-80"
         >
           <img
@@ -116,7 +112,6 @@ const ProductReview = () => {
         </a>
 
         <a
-          href="/products/item-f303/"
           className="group relative flex h-48 items-end overflow-hidden rounded-xl shadow-lg outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:h-80"
         >
           <img

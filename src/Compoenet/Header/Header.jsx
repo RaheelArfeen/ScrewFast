@@ -3,13 +3,12 @@ import { Moon, Sun, X, AlignJustify } from 'lucide-react';
 import { NavLink } from 'react-router';
 import "./Header.css"
 import SignIn from '../Signin/SignIn';
-import { useDarkMode } from '../DarkModeContext/DarkModeContext';
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
-  const [darkMode, setDarkMode] = useDarkMode();
+  const [darkMode, setDarkMode] = useState();
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem('darkMode');
@@ -30,7 +29,8 @@ const Header = () => {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('darkMode', 'false');
     }
-  }, [darkMode]); 
+  }, [darkMode]);
+
 
 
   const toggleMobileMenu = () => {
@@ -40,11 +40,11 @@ const Header = () => {
 
   const navLink = (
     <>
-        <NavLink to='/' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Home</NavLink>
-        <NavLink to='/products' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Products</NavLink>
-        <NavLink to='/services' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Services</NavLink>
-        <NavLink to='/blogs' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Blog</NavLink>
-        <NavLink to='/contact' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Contact</NavLink>
+        <NavLink onClick={() => !setMobileMenuOpen()} to='/' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Home</NavLink>
+        <NavLink onClick={() => !setMobileMenuOpen()} to='/products' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Products</NavLink>
+        <NavLink onClick={() => !setMobileMenuOpen()} to='/services' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Services</NavLink>
+        <NavLink onClick={() => !setMobileMenuOpen()} to='/blogs' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Blog</NavLink>
+        <NavLink onClick={() => !setMobileMenuOpen()} to='/contact' className="rounded-lg text-base font-medium outline-none md:py-3 transition duration-300 md:text-sm 2xl:text-base text-neutral-600 dark:text-neutral-400 hover:text-neutral-500">Contact</NavLink>
     </>
   )
 

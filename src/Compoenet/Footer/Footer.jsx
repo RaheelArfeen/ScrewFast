@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Footer = () => {
+
+    function CurrentYear() {
+        return new Date().getFullYear();
+    }
+
     return (
         <div>
             <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -39,11 +44,11 @@ const Footer = () => {
                                     <a href="#" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none">About us </a>
                                 </li>
                                 <li>
-                                    <a href="/blog" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none">Blog </a>
+                                    <a href="/blogs" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none">Blog </a>
                                 </li>
                                 <li>
                                     <a href="#" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none">Careers </a>
-                                    <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">We're hiring!</span>
+                                    <span class="ml-2 inline rounded-lg bg-[#E14D0B] px-2 py-1 text-xs font-bold text-neutral-50">We're hiring!</span>
                                 </li>
                                 <li>
                                     <a href="#" class="inline-flex gap-x-2 rounded-lg text-neutral-600 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-500 focus-visible:ring dark:text-neutral-400 dark:ring-zinc-200 dark:hover:text-neutral-300 dark:focus:outline-none">Customers </a>
@@ -56,9 +61,9 @@ const Footer = () => {
                                 <div class="mt-4 flex flex-col items-center gap-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800 sm:flex-row sm:gap-3">
                                     <div class="w-full">
                                         <label for="footer-input" class="sr-only">Search</label>
-                                        <input type="text" id="footer-input" name="footer-input" class="block w-full rounded-lg border-transparent bg-neutral-100 px-4 py-3 text-sm text-neutral-600 focus:border-orange-400 focus:ring-orange-400 disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-neutral-700 dark:text-gray-300 dark:placeholder:text-neutral-300 caret-orange-400" placeholder="Enter your email"/>
+                                        <input type="text" id="footer-input" name="footer-input" class="block w-full h-max rounded-lg border-transparent bg-neutral-100 px-4 py-3 text-sm text-neutral-600 focus:border-[#E14D0B] focus:ring-[#E14D0B] disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-neutral-700 dark:text-gray-300 dark:placeholder:text-neutral-300 caret-[#E14D0B]" placeholder="Enter your email"/>
                                     </div>
-                                    <a class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap rounded-lg border border-transparent bg-orange-400 p-3 text-sm font-bold text-neutral-50 outline-none ring-zinc-500 transition duration-300 hover:bg-orange-500 focus-visible:ring disabled:pointer-events-none disabled:opacity-50 dark:ring-zinc-200 dark:focus:outline-none dark:focus:ring-1 sm:w-auto" href="#">Subscribe </a>
+                                    <a class="inline-flex w-full items-center justify-center gap-x-2 whitespace-nowrap rounded-lg border border-transparent bg-[#E14D0B] p-3 text-sm font-bold text-neutral-50 outline-none ring-zinc-500 transition duration-300 hover:bg-[#E14D0B] focus-visible:ring disabled:pointer-events-none disabled:opacity-50 dark:ring-zinc-200 dark:focus:outline-none dark:focus:ring-1 sm:w-auto" href="#">Subscribe </a>
                                 </div>
                                 <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">Stay updated with the latest tools and exclusive deals. </p>
                             </form>
@@ -67,8 +72,8 @@ const Footer = () => {
                     <div class="mt-9 grid gap-y-2 sm:mt-12 sm:flex sm:items-center sm:justify-between sm:gap-y-0">
                         <div class="flex items-center justify-between">
                             <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                                © <span id="current-year"></span>
-                                ScrewFast. Crafted by <a class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300" href="https://www.gulamoff.dev/" target="_blank" rel="noopener noreferrer">gulamoff</a>
+                                © <span id="current-year"></span> 
+                                <CurrentYear/> ScrewFast. Crafted by <a class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300" href="https://www.gulamoff.dev/" target="_blank" rel="noopener noreferrer">gulamoff</a>
                                 .
                             </p>
                         </div>

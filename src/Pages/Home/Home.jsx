@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Banner from '../../Compoenet/Banner/Banner';
 import Industry from '../HomeContainer/Industry/Industry';
 import Demands from '../HomeContainer/Demands/Demands';
@@ -9,6 +9,10 @@ import FAQ from '../HomeContainer/FAQ/FAQ';
 import BottomPart from '../HomeContainer/bottomPart/bottomPart';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+  
     return (
         <div className='z-10'>
           <Banner/>

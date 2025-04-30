@@ -5,6 +5,7 @@ import TitleManager from '../../TitleManager/TitleManager';
 
 const Root = () => {
 
+    
 
     return (
         <div>
@@ -12,7 +13,7 @@ const Root = () => {
             <div className='2xl:container mx-auto sticky top-4 inset-x-0 z-20'>
                 <Header/>
             </div>
-            <div className='mx-auto max-w-screen-2xl min-h-screen sm:px-6 md:px-6 lg:px-8 xl:px-6 px-4'>
+            <div className='mx-auto max-w-screen-2xl sm:px-6 md:px-6 lg:px-8 xl:px-6 px-4'>
                 <Outlet></Outlet>
             </div>
             <div>
